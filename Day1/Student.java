@@ -16,4 +16,8 @@ public class Student { //public class 이름과 클래스 파일 이름은 같아야함.
 		System.out.println(studentName + ", " + address);
 	}
 	
+	public String getStudentName() {
+		return studentName;
+	}
+	
 }

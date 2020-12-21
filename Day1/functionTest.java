@@ -19,7 +19,11 @@ public class functionTest {
 		return sum;
 	}
 	
-	public static void main(String[] args) {
+	public static void onceAponATime() { //입력값과 반환값이 모두 없는 함수
+		System.out.println("There was a Divine Dragon....");
+	}
+	
+	public static void main(String[] args) { //값 확인
 		int n1 = 10;
 		int n2 = 20;
 		
@@ -31,5 +35,7 @@ public class functionTest {
 		
 		System.out.println(total1);
 		System.out.println(total2);
+		
+		onceAponATime();
 	}
 }

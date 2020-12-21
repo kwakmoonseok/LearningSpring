@@ -1,0 +1,17 @@
+package Day2;
+
+public class OrderTest {
+	public static void main(String[] args) {
+		Order order = new Order();
+	
+		order.orderNum = 1;
+		order.id = "kd134v";
+		order.date = "2020/12/22";
+		order.address = "±¤ÁÖ";
+		
+		System.out.println(order.orderNum + order.id + order.date + order.address);
+	}
+	
+	
+	
+}

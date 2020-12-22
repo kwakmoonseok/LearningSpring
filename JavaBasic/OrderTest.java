@@ -1,4 +1,4 @@
-package Day2;
+package JavaBasic;
 
 public class OrderTest {
 	public static void main(String[] args) {

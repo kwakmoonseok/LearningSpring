@@ -1,4 +1,4 @@
-package Day1;
+package JavaBasic;
 
 public class functionTest {
 	public static int addNum(int num1, int num2) { //입력값과 반환값이 있는 함수

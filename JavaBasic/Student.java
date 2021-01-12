@@ -1,8 +1,8 @@
 package JavaBasic;
 
 class Subject {
-	private String subjectName;
-	private int score;
+	String subjectName;
+	int score;
 	
 }
 /* 학생에 대한 정보를 보여주는 클래스*/

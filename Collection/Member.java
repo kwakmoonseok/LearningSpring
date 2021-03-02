@@ -1,6 +1,6 @@
 package Collection;
 
-public class Member {
+public class Member implements Comparable<Member> {
 	private int memberId;
 	private String memberName;
 	
@@ -48,6 +48,12 @@ public class Member {
 			return (this.memberId == member.memberId);
 		}
 		return false;
+	}
+
+	@Override
+	public int compareTo(Member member) {
+		// TODO Auto-generated method stub
+		return (this.memberId - member.memberId);
 	}
 	
 }

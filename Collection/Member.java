@@ -1,59 +1,62 @@
 package Collection;
 
-public class Member implements Comparable<Member> {
-	private int memberId;
-	private String memberName;
-	
-	public Member() {
-		
-	}
+import java.util.Comparator;
 
-	public Member(int memberId, String memberName) {
-		this.memberId = memberId;
-		this.memberName = memberName;
-	}
+public class Member implements Comparator<Member> {
+    private int memberId;
+    private String memberName;
 
-	public int getMemberId() {
-		return memberId;
-	}
+    public Member() {
 
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
-	}
+    }
 
-	public String getMemberName() {
-		return memberName;
-	}
+    public Member(int memberId, String memberName) {
+        this.memberId = memberId;
+        this.memberName = memberName;
+    }
 
-	public void setMemberName(String memberName) {
-		this.memberName = memberName;
-	}
-	
-	public String toString() {
-		return memberName + ": " + memberId;
-	}
+    public int getMemberId() {
+        return memberId;
+    }
 
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return memberId;
-	}
+    public void setMemberId(int memberId) {
+        this.memberId = memberId;
+    }
 
-	@Override
-	public boolean equals(Object obj) { //setÀÇ Áßº¹ ±âÁØÀº ÀÌ ÇÔ¼öÀÌ±â ¶§¹®¿¡ ÇÊ¿äÇÏ¸é ÀçÁ¤ÀÇÇÏ¿© setÀÇ Á¶°ÇÀ» ¸ÂÃçÁÖ¾î¾ß ÇÑ´Ù.
-		// TODO Auto-generated method stub
-		if (obj instanceof Member) {
-			Member member = (Member)obj;
-			
-			return (this.memberId == member.memberId);
-		}
-		return false;
-	}
+    public String getMemberName() {
+        return memberName;
+    }
 
-	@Override
-	public int compareTo(Member member) {
-		// TODO Auto-generated method stub
-		return (this.memberId - member.memberId);
-	}
-	
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
+    }
+
+    public String toString() {
+        return memberName + ": " + memberId;
+    }
+
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return memberId;
+    }
+
+    @Override
+    public boolean equals(Object obj) { //setï¿½ï¿½ ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ setï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        // TODO Auto-generated method stub
+        if (obj instanceof Member) {
+            Member member = (Member) obj;
+
+            return (this.memberId == member.memberId);
+        }
+        return false;
+    }
+
+    @Override
+    public int compare(Member o1, Member o2) {
+        // TODO Auto-generated method stub
+        return (o1.memberId - o2.memberId);
+    }
+
+
 }

@@ -1,49 +1,51 @@
 package JavaBasic;
 
 class Subject {
-	String subjectName;
-	int score;
-	
+    String subjectName;
+    int score;
+
 }
-/* ÇÐ»ý¿¡ ´ëÇÑ Á¤º¸¸¦ º¸¿©ÁÖ´Â Å¬·¡½º*/
+/* ï¿½Ð»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½*/
 
-// public class´Â Å¬·¡½º ÆÄÀÏ´ç ÇÏ³ª
-public class Student { //public class ÀÌ¸§°ú Å¬·¡½º ÆÄÀÏ ÀÌ¸§Àº °°¾Æ¾ßÇÔ.
-	
-	public int studentID;
-	//private - ´Ù¸¥ Å¬·¡½º¿¡¼­ Á÷Á¢ Á¢±Ù ºÒ°¡´ÉÇÔ
-	public String studentName;
-	
-	Subject korea;
-	Subject math;
-	
-	//µðÆúÆ® »ý¼ºÀÚ - »ç¿ëÀÚ ÁöÁ¤ »ý¼ºÀÚ°¡ Á¸ÀçÇÏ¸é ÀÛµ¿ÇÏÁö ¾ÊÀ½
+// public classï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ï³ï¿½
+public class Student { //public class ï¿½Ì¸ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¾ï¿½ï¿½ï¿½.
 
-	public Student(int id, String name) { //»ç¿ëÀÚ ÁöÁ¤ »ý¼ºÀÚ
-		studentID = id;
-		studentName = name;
-		korea = new Subject();
-		math = new Subject();
-	}
-	
-	public void setKoreaSubject(String name, int score) {
-		korea.subjectName = name;
-		korea.score = score;
-	}
-	public void setMathSubject(String name, int score) {
-		math.subjectName = name;
-		math.score = score;
-	}
-	public void showStudentScore() {
-		int total = korea.score + math.score;
-		System.out.println(studentName + ": " + total);
-	}
-	
-	public static void main(String[] args) {
-		Student lee = new Student(100, "lee");
-		lee.setKoreaSubject("±¹¾î", 100);
-		lee.setMathSubject("¼öÇÐ", 95);
-		
-		lee.showStudentScore();
-	}
+    public int studentID;
+    //private - ï¿½Ù¸ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ï¿½ï¿½
+    public String studentName;
+
+    Subject korea;
+    Subject math;
+
+    //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ûµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+    public Student(int id, String name) { //ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        studentID = id;
+        studentName = name;
+        korea = new Subject();
+        math = new Subject();
+    }
+
+    public void setKoreaSubject(String name, int score) {
+        korea.subjectName = name;
+        korea.score = score;
+    }
+
+    public void setMathSubject(String name, int score) {
+        math.subjectName = name;
+        math.score = score;
+    }
+
+    public void showStudentScore() {
+        int total = korea.score + math.score;
+        System.out.println(studentName + ": " + total);
+    }
+
+    public static void main(String[] args) {
+        Student lee = new Student(100, "lee");
+        lee.setKoreaSubject("ï¿½ï¿½ï¿½ï¿½", 100);
+        lee.setMathSubject("ï¿½ï¿½ï¿½ï¿½", 95);
+
+        lee.showStudentScore();
+    }
 }

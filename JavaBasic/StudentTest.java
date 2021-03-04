@@ -3,66 +3,74 @@ package JavaBasic;
 import java.util.ArrayList;
 
 class SubjectArray {
-	private String name;
-	private int score;
-	
-	public SubjectArray(String name, int score) {
-		this.name = name;
-		this.score = score;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getScore() {
-		return score;
-	}
-	public void setScore(int score) {
-		this.score = score;
-	}
-	
+    private String name;
+    private int score;
+
+    public SubjectArray(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
 }
+
 class StudentArray {
-	int studentID;
-	String studentName;
-	ArrayList<SubjectArray> subjectList;
-	
-	public StudentArray(int studentID, String studentName) {
-		this.studentID = studentID;
-		this.studentName = studentName;
-		
-		subjectList = new ArrayList<SubjectArray>();
-	}
-	public void addSubject(String name, int score) {
-		SubjectArray subject = new SubjectArray(name, score);	
-		subjectList.add(subject);
-	}
-	public void showStudentInfo() {
-		int total = 0;
-		
-		for (SubjectArray o : subjectList) {
-			total += o.getScore();
-			System.out.println(studentName + " - " + o.getName() + ": " + o.getScore());
-		}
-		System.out.println(studentName + " : " + total);
-	}
+    int studentID;
+    String studentName;
+    ArrayList<SubjectArray> subjectList;
+
+    public StudentArray(int studentID, String studentName) {
+        this.studentID = studentID;
+        this.studentName = studentName;
+
+        subjectList = new ArrayList<SubjectArray>();
+    }
+
+    public void addSubject(String name, int score) {
+        SubjectArray subject = new SubjectArray(name, score);
+        subjectList.add(subject);
+    }
+
+    public void showStudentInfo() {
+        int total = 0;
+
+        for (SubjectArray o : subjectList) {
+            total += o.getScore();
+            System.out.println(studentName + " - " + o.getName() + ": " + o.getScore());
+        }
+        System.out.println(studentName + " : " + total);
+    }
 }
+
 public class StudentTest {
-	public static void main(String[] args) {
-		StudentArray lee = new StudentArray(1001, "lee");
-		StudentArray kim = new StudentArray(1002, "kim");
-		
-		lee.addSubject("±¹¾î", 100);
-		lee.addSubject("¼öÇÐ", 90);
-		
-		kim.addSubject("±¹¾î", 80);
-		kim.addSubject("¼öÇÐ", 98);
-		
-		kim.showStudentInfo();
-		lee.showStudentInfo();
-	}
-	
+    public static void main(String[] args) {
+        StudentArray lee = new StudentArray(1001, "lee");
+        StudentArray kim = new StudentArray(1002, "kim");
+
+        lee.addSubject("ï¿½ï¿½ï¿½ï¿½", 100);
+        lee.addSubject("ï¿½ï¿½ï¿½ï¿½", 90);
+
+        kim.addSubject("ï¿½ï¿½ï¿½ï¿½", 80);
+        kim.addSubject("ï¿½ï¿½ï¿½ï¿½", 98);
+
+        kim.showStudentInfo();
+        lee.showStudentInfo();
+    }
+
 }	
 

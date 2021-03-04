@@ -1,14 +1,14 @@
 package JavaBasic;
 
 public class StringTest2 {
-	public static void main(String[] args) {
-		String java = new String("java");
-		String android = new String("android");
-		System.out.println(System.identityHashCode(java));
-		
-		java = java.concat(android);
-		
-		System.out.println(java);
-		System.out.println(System.identityHashCode(java)); // »õ·Î¿î ¹®ÀÚ¿­ »ý¼º
-	}
+    public static void main(String[] args) {
+        String java = new String("java");
+        String android = new String("android");
+        System.out.println(System.identityHashCode(java));
+
+        java = java.concat(android);
+
+        System.out.println(java);
+        System.out.println(System.identityHashCode(java)); // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½
+    }
 }

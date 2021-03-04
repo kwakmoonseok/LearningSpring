@@ -1,19 +1,19 @@
 package JavaBasic;
 
 public class PersonTest {
-	public static void main(String[] args) {
-		Person person = new Person();
-	
-		person.age = 40;
-		person.name = "James";
-		person.isMarried = true;
-		person.numberOfChildren = 3;
-		
-		System.out.println("³ªÀÌ : " + person.age);
-		System.out.println("ÀÌ¸§ : " + person.name);
-		System.out.println("°áÈ¥ ¿©ºÎ : " + person.isMarried);
-		System.out.println("ÀÚ½Ä : " + person.numberOfChildren);
-	}
-	
-	
+    public static void main(String[] args) {
+        Person person = new Person();
+
+        person.age = 40;
+        person.name = "James";
+        person.isMarried = true;
+        person.numberOfChildren = 3;
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + person.age);
+        System.out.println("ï¿½Ì¸ï¿½ : " + person.name);
+        System.out.println("ï¿½ï¿½È¥ ï¿½ï¿½ï¿½ï¿½ : " + person.isMarried);
+        System.out.println("ï¿½Ú½ï¿½ : " + person.numberOfChildren);
+    }
+
+
 }

@@ -6,32 +6,32 @@ import java.util.Iterator;
 import Collection.Member;
 
 public class MemberHashSet {
-	private HashSet<Member> hashSet;
-	
-	public MemberHashSet() {
-		hashSet = new HashSet<Member>();
-	}
-	
-	public void addMember(Member member) {
-		hashSet.add(member);
-	}
-	
-	public boolean removeMember(int memberId) {
-		Iterator<Member> ir = hashSet.iterator();
-		while (ir.hasNext()) {
-			Member member = ir.next();
-			if (member.getMemberId() == memberId) {
-				hashSet.remove(member);
-				return true;
-			}
-		}
-		System.out.println(memberId + "¹øÈ£°¡ ¾ø½À´Ï´Ù.");
-		return false;
-	}
-	
-	public void showAllMember() {
-		for (Member member : hashSet) {
-			System.out.println(member);
-		}
-	}
+    private HashSet<Member> hashSet;
+
+    public MemberHashSet() {
+        hashSet = new HashSet<Member>();
+    }
+
+    public void addMember(Member member) {
+        hashSet.add(member);
+    }
+
+    public boolean removeMember(int memberId) {
+        Iterator<Member> ir = hashSet.iterator();
+        while (ir.hasNext()) {
+            Member member = ir.next();
+            if (member.getMemberId() == memberId) {
+                hashSet.remove(member);
+                return true;
+            }
+        }
+        System.out.println(memberId + "ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        return false;
+    }
+
+    public void showAllMember() {
+        for (Member member : hashSet) {
+            System.out.println(member);
+        }
+    }
 }

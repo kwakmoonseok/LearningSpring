@@ -1,7 +1,7 @@
 package Generic;
 
 public class Plastic extends Meterial {
-	public String toString() {
-		return "Àç·á´Â Plastic";
-	}
+    public String toString() {
+        return "ï¿½ï¿½ï¿½ï¿½ Plastic";
+    }
 }

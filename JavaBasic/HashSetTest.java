@@ -4,20 +4,20 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class HashSetTest {
-	public static void main(String[] args) {
-		HashSet<String> set = new HashSet<String>();
-		set.add("±èÀ¯½Å");
-		set.add("ÀÌ¼ø½Å");
-		set.add("°­°¨Âù");
-		set.add("ÀÌ¼ø½Å");
-		
-		System.out.println(set); //Áßº¹µÈ µ¥ÀÌÅÍ °ªÀÌ ³ª¿ÀÁö ¾ÊÀ½
-		
-		Iterator<String> ir = set.iterator(); //¼øÈ¸½Ã iterator ÀÚ·áÇü »ç¿ë
-		
-		while(ir.hasNext()) {
-			String str = ir.next();
-			System.out.println(str);
-		}
-	}
+    public static void main(String[] args) {
+        HashSet<String> set = new HashSet<String>();
+        set.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        set.add("ï¿½Ì¼ï¿½ï¿½ï¿½");
+        set.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        set.add("ï¿½Ì¼ï¿½ï¿½ï¿½");
+
+        System.out.println(set); //ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+        Iterator<String> ir = set.iterator(); //ï¿½ï¿½È¸ï¿½ï¿½ iterator ï¿½Ú·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+
+        while (ir.hasNext()) {
+            String str = ir.next();
+            System.out.println(str);
+        }
+    }
 }

@@ -7,32 +7,32 @@ import java.util.TreeSet;
 import Collection.Member;
 
 public class MemberTreeSet {
-	private TreeSet<Member> treeSet;
-	
-	public MemberTreeSet() {
-		treeSet = new HashSet<Member>();
-	}
-	
-	public void addMember(Member member) {
-		treeSet.add(member);
-	}
-	
-	public boolean removeMember(int memberId) {
-		Iterator<Member> ir = treeSet.iterator();
-		while (ir.hasNext()) {
-			Member member = ir.next();
-			if (member.getMemberId() == memberId) {
-				treeSet.remove(member);
-				return true;
-			}
-		}
-		System.out.println(memberId + "¹øÈ£°¡ ¾ø½À´Ï´Ù.");
-		return false;
-	}
-	
-	public void showAllMember() {
-		for (Member member : treeSet) {
-			System.out.println(member);
-		}
-	}
+    private TreeSet<Member> treeSet;
+
+    public MemberTreeSet() {
+        treeSet = new TreeSet<Member>(new Member());
+    }
+
+    public void addMember(Member member) {
+        treeSet.add(member);
+    }
+
+    public boolean removeMember(int memberId) {
+        Iterator<Member> ir = treeSet.iterator();
+        while (ir.hasNext()) {
+            Member member = ir.next();
+            if (member.getMemberId() == memberId) {
+                treeSet.remove(member);
+                return true;
+            }
+        }
+        System.out.println(memberId + "ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        return false;
+    }
+
+    public void showAllMember() {
+        for (Member member : treeSet) {
+            System.out.println(member);
+        }
+    }
 }

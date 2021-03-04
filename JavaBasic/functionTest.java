@@ -1,41 +1,41 @@
 package JavaBasic;
 
 public class functionTest {
-	public static int addNum(int num1, int num2) { //ÀÔ·Â°ª°ú ¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼ö
-		return num1 + num2;
-	}
-	
-	public static void sayHello(String greeting) { //ÀÔ·Â°ªÀº ÀÖÀ¸³ª ¹İÈ¯°ªÀÌ ¾ø´Â ÇÔ¼ö
-		System.out.println(greeting);
-	}
-	
-	public static int calcSum() { //ÀÔ·Â°ªÀÌ ¾øÀ¸³ª ¹İÈ¯°ªÀÌ ÀÖ´Â ÇÔ¼ö
-		int sum = 0;
-		
-		for (int i = 0; i <= 100; i++) {
-			sum += i;
-		}
-		
-		return sum;
-	}
-	
-	public static void onceAponATime() { //ÀÔ·Â°ª°ú ¹İÈ¯°ªÀÌ ¸ğµÎ ¾ø´Â ÇÔ¼ö
-		System.out.println("There was a Divine Dragon....");
-	}
-	
-	public static void main(String[] args) { //°ª È®ÀÎ
-		int n1 = 10;
-		int n2 = 20;
-		
-		int total1 = addNum(n1, n2);
-		
-		sayHello("Hello");
-		
-		int total2 = calcSum();
-		
-		System.out.println(total1);
-		System.out.println(total2);
-		
-		onceAponATime();
-	}
+    public static int addNum(int num1, int num2) { //ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
+        return num1 + num2;
+    }
+
+    public static void sayHello(String greeting) { //ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
+        System.out.println(greeting);
+    }
+
+    public static int calcSum() { //ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
+        int sum = 0;
+
+        for (int i = 0; i <= 100; i++) {
+            sum += i;
+        }
+
+        return sum;
+    }
+
+    public static void onceAponATime() { //ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
+        System.out.println("There was a Divine Dragon....");
+    }
+
+    public static void main(String[] args) { //ï¿½ï¿½ È®ï¿½ï¿½
+        int n1 = 10;
+        int n2 = 20;
+
+        int total1 = addNum(n1, n2);
+
+        sayHello("Hello");
+
+        int total2 = calcSum();
+
+        System.out.println(total1);
+        System.out.println(total2);
+
+        onceAponATime();
+    }
 }

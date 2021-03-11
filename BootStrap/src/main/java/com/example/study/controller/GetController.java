@@ -1,6 +1,5 @@
 package com.example.study.controller;
 
-import ch.qos.logback.core.CoreConstants;
 import com.example.study.model.SearchParam;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +19,7 @@ public class GetController {
         System.out.println("password: " + pwd);
 
         return id + pwd;
+
     }
 
     @GetMapping("/getMultiParameter")

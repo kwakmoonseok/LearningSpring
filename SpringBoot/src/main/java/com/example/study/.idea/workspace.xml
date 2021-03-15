@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78d44901-e36d-45f7-a534-77721fd1b001" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/GetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/SearchParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../test/java/com/example/study/StudyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/6.8.2/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/BootStrap/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Collection/LinkedListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Collection/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Collection/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Collection/StackTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Generic/GenericPrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Generic/GenericPrinterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Generic/Meterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Generic/Plastic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/Generic/Powder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/ArrayListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/CardCompany.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/CardCompanyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/ComparatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/HashSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/MemberHashSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/MemberHashSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/MemberTreeSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/MemberTreeSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/MyCompare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/OrderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/PersonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/StringBuilderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/StringTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/StringTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/StudentArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/StudentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/SubjectArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/TreeSetTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/JavaBasic/functionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/classes/java/main/com/example/study/StudyApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/resources/main/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/controller/GetController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/controller/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/model/SearchParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/src/main/java/com/example/study/StudyApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/java/com/example/study/src/test/java/com/example/study/StudyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/test/java/com/example/study/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/test/java/com/example/study/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../BootStrap/src/test/java/com/example/study/StudyApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+  </component>
+  <component name="ProjectId" id="1pgVrf4eBJVHkjLU3XenwoxL4UX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="study" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="study" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78d44901-e36d-45f7-a534-77721fd1b001" name="Default Changelist" comment="" />
+      <created>1615604921082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615604921082</updated>
+      <workItem from="1615604922510" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -2,6 +2,7 @@ package com.example.study.repository;
 
 import com.example.study.StudyApplication;
 import com.example.study.StudyApplicationTests;
+import com.example.study.model.entity.Item;
 import com.example.study.model.entity.User;
 import net.bytebuddy.asm.Advice;
 import org.junit.Assert;
@@ -41,11 +42,12 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Test
     @Transactional
     public void read(){
-        Optional<User> user = userRepository.findById(3L);
-        Assert.assertNull(user);
+        Optional<User> user = userRepository.findByAccountId("TestUser01");
+        //Assert.assertNull(user);
         user.ifPresent(selectUser -> {
             selectUser.getOrderDetailList().stream().forEach(detail -> {
-                System.out.println(detail.getItem());
+                Item item = detail.getItem();
+                System.out.println(item);
             });
         });
     }

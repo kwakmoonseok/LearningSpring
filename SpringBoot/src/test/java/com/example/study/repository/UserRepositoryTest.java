@@ -27,41 +27,58 @@ public class UserRepositoryTest extends StudyApplicationTests {
 
     @Test
     public void create(){
+        String account = "Test03";
+        String password = "Test03";
+        String status = "Registered";
+        String email = "Test01@gmail.com";
+        String phoneNumber = "010-1111-3333";
+        LocalDateTime registeredAt = LocalDateTime.now();
+        LocalDateTime createdAt = LocalDateTime.now();
+        String createdBy = "AdminServer";
+
         User user = new User();
-        user.setAccountId("TestUser01");
-        user.setEmail("TestUser01@gmail.com");
-        user.setPhoneNumber("010-1111-1111");
-        user.setCreatedAt(LocalDateTime.now());
-        user.setCreatedBy("Admin");
+        user.setAccount(account);
+        user.setPassword(password);
+        user.setStatus(status);
+        user.setEmail(email);
+        user.setPhoneNumber(phoneNumber);
+        user.setRegisteredAt(registeredAt);
+
+        User u = User.builder().account(account).password(password).status(status).email(email).build();
 
         User newUser = userRepository.save(user);
-        System.out.println("newUser :" + newUser);
 
+        Assert.assertNotNull(newUser);
     }
 
     @Test
     @Transactional
     public void read(){
-        Optional<User> user = userRepository.findByAccountId("TestUser01");
-        //Assert.assertNull(user);
-        user.ifPresent(selectUser -> {
-            selectUser.getOrderDetailList().stream().forEach(detail -> {
-                Item item = detail.getItem();
-                System.out.println(item);
+        User user = userRepository.findFirstByPhoneNumberOrderByIdDesc("010-1111-2222");
+
+        user.getOrderGroupList().stream().forEach(orderGroup -> {
+
+            System.out.println(orderGroup.getRevName());
+            System.out.println(orderGroup.getRevAddress());
+            System.out.println(orderGroup.getTotalPrice());
+            System.out.println(orderGroup.getTotalQuantity());
+
+            orderGroup.getOrderDetailList().stream().forEach(orderDetail -> {
+                System.out.println(orderDetail.getItem().getPartner().getName());
+                System.out.println(orderDetail.getItem().getPartner().getCategory().getTitle());
+                System.out.println(orderDetail.getItem().getName());
+                System.out.println(orderDetail.getItem().getPartner().getCallCenter());
+                System.out.println(orderDetail.getStatus());
+                System.out.println(orderDetail.getArrivalDate());
             });
         });
+
+        Assert.assertNotNull(user);
     }
 
     @Test
     public void update(){
-        Optional<User> user = userRepository.findById(2L);
-        user.ifPresent(selectUser -> {
-            selectUser.setAccountId("pppp");
-            selectUser.setUpdatedAt(LocalDateTime.now());
-            selectUser.setUpdatedBy("Update Method");
 
-            userRepository.save(selectUser);
-        });
     }
 
     @Test

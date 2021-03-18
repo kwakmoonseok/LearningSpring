@@ -9,6 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -27,8 +28,8 @@ public class Item {
     private String status;
     private String name;
     private String title;
-    private String Content;
-    private Integer price;
+    private String content;
+    private BigDecimal price;
     private String brandName;
     private LocalDateTime registeredAt;
     private LocalDateTime unregisteredAt;

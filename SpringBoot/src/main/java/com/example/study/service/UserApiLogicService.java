@@ -2,15 +2,20 @@ package com.example.study.service;
 
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.User;
+import com.example.study.model.enumclass.UserStatus;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.UserApiRequest;
 import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UserApiLogicService implements CrudInterface<UserApiRequest, UserApiResponse> {
@@ -26,21 +31,21 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
         User user = User.builder()
                 .account(userApiRequest.getAccount())
                 .password(userApiRequest.getPassword())
-                .status("Registered")
+                .status(UserStatus.REGISTERED)
                 .phoneNumber(userApiRequest.getPhoneNumber())
                 .email(userApiRequest.getEmail())
                 .registeredAt(LocalDateTime.now())
                 .build();
         User newUser = userRepository.save(user);
         //3.생성된 데이터 -> userApiResponse return
-        return response(newUser);
+        return Header.OK(response(newUser));
     }
 
     @Override
     public Header<UserApiResponse> read(Long id) {
         //id -> repository get으로 데이터 가져옴
         return userRepository.findById(id)
-                .map(user -> response(user))
+                .map(user -> Header.OK(response(user)))
                 .orElseGet(() -> Header.ERROR("데이터 없음"));
 
     }
@@ -64,7 +69,7 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
             return user;
         })
                 .map(user -> userRepository.save(user))
-                .map(user -> response(user))
+                .map(user -> Header.OK(response(user)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
@@ -78,7 +83,16 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
         }).orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
-    private Header<UserApiResponse> response(User user){
+    public Header<List<UserApiResponse>> search(Pageable pageable){
+        Page<User> users = userRepository.findAll(pageable);
+
+        List<UserApiResponse> userApiResponseList = users.stream()
+                .map(user -> response(user))
+                .collect(Collectors.toList());
+        return Header.OK(userApiResponseList);
+    }
+
+    private UserApiResponse response(User user){
         UserApiResponse userApiResponse = UserApiResponse.builder()
                 .id(user.getId())
                 .account(user.getAccount())
@@ -89,6 +103,6 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
                 .registeredAt(user.getRegisteredAt())
                 .unregisteredAt(user.getUnregisteredAt())
                 .build();
-        return Header.OK(userApiResponse);
+        return userApiResponse;
     }
 }

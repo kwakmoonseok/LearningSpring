@@ -47,28 +47,35 @@ public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, 
 
     @Override
     public Header<PartnerApiResponse> read(Long id) {
-        return categoryRepository.findById(id)
+        return partnerRepository.findById(id)
                 .map(this::response)
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header<PartnerApiResponse> update(Header<PartnerApiRequest> request) {
-        CategoryApiRequest body = request.getData();
-        return categoryRepository.findById(body.getId())
-                .map(category -> {
-                    category.setId(body.getId())
-                            .setType(body.getType())
-                            .setTitle(body.getTitle())
+        PartnerApiRequest body = request.getData();
+        return partnerRepository.findById(body.getId())
+                .map(partner -> {
+                    partner.setId(body.getId())
+                            .setName(body.getName())
+                            .setStatus(body.getStatus())
+                            .setAddress(body.getAddress())
+                            .setCallCenter(body.getCallCenter())
+                            .setPartnerNumber(body.getPartnerNumber())
+                            .setBusinessNumber(body.getBusinessNumber())
+                            .setCeoName(body.getCeoName())
+                            .setRegisteredAt(body.getRegisteredAt())
+                            .setUnregisteredAt(body.getUnregisteredAt())
                             .setCreatedAt(body.getCreatedAt())
                             .setCreatedBy(body.getCreatedBy())
                             .setUpdatedAt(body.getUpdatedAt())
                             .setUpdatedBy(body.getUpdatedBy());
-                    return category;
+                    return partner;
                 })
-                .map(newCategory -> {
-                    categoryRepository.save(newCategory);
-                    return newCategory;
+                .map(newPartner -> {
+                    partnerRepository.save(newPartner);
+                    return newPartner;
                 })
                 .map(this::response)
                 .orElseGet(()->Header.ERROR("Data is not exist"));
@@ -76,9 +83,9 @@ public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, 
 
     @Override
     public Header delete(Long id) {
-        return categoryRepository.findById(id)
-                .map(category -> {
-                    categoryRepository.delete(category);
+        return partnerRepository.findById(id)
+                .map(partner -> {
+                    partnerRepository.delete(partner);
                     return Header.OK();
                 })
                 .orElseGet(()->Header.ERROR("Data is not exist"));

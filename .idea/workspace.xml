@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8bde2574-bb32-4856-a1e5-ca23bf8be438" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/dataSources/baaa46ce-d285-47c5-acec-192efe7f8364.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/dataSources/baaa46ce-d285-47c5-acec-192efe7f8364.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/classes/com.example.study.repository.UserRepositoryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/classes/com.example.study.repository.UserRepositoryTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/packages/com.example.study.repository.html" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/build/reports/tests/test/packages/com.example.study.repository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/build/test-results/test/TEST-com.example.study.repository.UserRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/build/test-results/test/TEST-com.example.study.repository.UserRepositoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/component/LoginUserAuditorAware.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/component/LoginUserAuditorAware.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/config/JpaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/GetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/GetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/CategoryApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/CategoryApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/ItemApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/ItemApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/OrderGroupApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/OrderGroupApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/PartnerApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/PartnerApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/controller/api/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/ifs/CrudInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/ifs/CrudInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/SearchParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/SearchParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/OrderGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/OrderGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Partner.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/Partner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/CategoryApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/CategoryApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/ItemApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/ItemApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/OrderGroupApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/OrderGroupApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/PartnerApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/PartnerApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/UserApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/request/UserApiRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/CategoryApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/CategoryApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/ItemApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/ItemApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/OrderGroupApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/OrderGroupApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/PartnerApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/PartnerApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/UserApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/model/network/response/UserApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/AdminUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/AdminUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/OrderDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/OrderDetailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/OrderGroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/OrderGroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/PartnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/PartnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/CategoryApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/CategoryApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/ItemApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/ItemApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/OrderGroupApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/OrderGroupApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/PartnerApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/PartnerApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/UserApiLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/example/study/service/UserApiLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/AdminUserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/AdminUserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/CategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/CategoryRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/ItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/ItemRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/OrderDetailRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/OrderDetailRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/OrderGroupRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/OrderGroupRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/PartnerRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/PartnerRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/test/java/com/example/study/repository/UserRepositoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1q9hRBogI0oOmNuYH7pO18wrcMC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SpringBoot" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MycontectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mycontect.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fastcampus.javaallinone.project3.mycontect.MycontectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bde2574-bb32-4856-a1e5-ca23bf8be438" name="Default Changelist" comment="" />
+      <created>1616497704131</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616497704131</updated>
+      <workItem from="1616497705304" duration="589000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -3,24 +3,28 @@ package com.example.study.service;
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.Category;
 import com.example.study.model.entity.Partner;
+import com.example.study.model.entity.User;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.CategoryApiRequest;
 import com.example.study.model.network.request.PartnerApiRequest;
 import com.example.study.model.network.response.CategoryApiResponse;
 import com.example.study.model.network.response.PartnerApiResponse;
+import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.CategoryRepository;
 import com.example.study.repository.PartnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
-public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, PartnerApiResponse> {
+public class PartnerApiLogicService extends BaseService<PartnerApiRequest, PartnerApiResponse, Partner> {
     @Autowired
     private CategoryRepository categoryRepository;
-    @Autowired
-    private PartnerRepository partnerRepository;
     @Override
     public Header<PartnerApiResponse> create(Header<PartnerApiRequest> request) {
         PartnerApiRequest body = request.getData();
@@ -41,21 +45,21 @@ public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, 
                 .updatedBy(body.getUpdatedBy())
                 .category(categoryRepository.getOne(body.getCategoryId()))
                 .build();
-        Partner newPartner = partnerRepository.save(partner);
-        return response(partner);
+        Partner newPartner = baseRepository.save(partner);
+        return Header.OK(response(partner));
     }
 
     @Override
     public Header<PartnerApiResponse> read(Long id) {
-        return partnerRepository.findById(id)
-                .map(this::response)
+        return baseRepository.findById(id)
+                .map(partner -> Header.OK(response(partner)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header<PartnerApiResponse> update(Header<PartnerApiRequest> request) {
         PartnerApiRequest body = request.getData();
-        return partnerRepository.findById(body.getId())
+        return baseRepository.findById(body.getId())
                 .map(partner -> {
                     partner.setId(body.getId())
                             .setName(body.getName())
@@ -74,24 +78,34 @@ public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, 
                     return partner;
                 })
                 .map(newPartner -> {
-                    partnerRepository.save(newPartner);
+                    baseRepository.save(newPartner);
                     return newPartner;
                 })
-                .map(this::response)
+                .map(partner -> Header.OK(response(partner)))
                 .orElseGet(()->Header.ERROR("Data is not exist"));
     }
 
     @Override
     public Header delete(Long id) {
-        return partnerRepository.findById(id)
+        return baseRepository.findById(id)
                 .map(partner -> {
-                    partnerRepository.delete(partner);
+                    baseRepository.delete(partner);
                     return Header.OK();
                 })
                 .orElseGet(()->Header.ERROR("Data is not exist"));
     }
 
-    private Header<PartnerApiResponse> response(Partner partner){
+    @Override
+    public Header<List<PartnerApiResponse>> search(Pageable pageable) {
+        Page<Partner> partners = baseRepository.findAll(pageable);
+
+        List<PartnerApiResponse> partnerApiResponseList = partners.stream()
+                .map(partner -> response(partner))
+                .collect(Collectors.toList());
+        return Header.OK(partnerApiResponseList);
+    }
+
+    private PartnerApiResponse response(Partner partner){
         PartnerApiResponse body = PartnerApiResponse.builder()
                 .id(partner.getId())
                 .name(partner.getName())
@@ -109,6 +123,6 @@ public class PartnerApiLogicService implements CrudInterface<PartnerApiRequest, 
                 .updatedBy(partner.getUpdatedBy())
                 .categoryId(partner.getCategory().getId())
                 .build();
-        return Header.OK(body);
+        return body;
     }
 }

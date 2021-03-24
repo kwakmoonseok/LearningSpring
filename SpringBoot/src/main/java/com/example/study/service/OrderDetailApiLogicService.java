@@ -2,20 +2,25 @@ package com.example.study.service;
 
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.OrderDetail;
+import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.OrderDetailApiRequest;
 import com.example.study.model.network.response.OrderDetailApiResponse;
+import com.example.study.model.network.response.OrderGroupApiResponse;
 import com.example.study.repository.ItemRepository;
 import com.example.study.repository.OrderDetailRepository;
 import com.example.study.repository.OrderGroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-@Service
-public class OrderDetailApiLogicService implements CrudInterface<OrderDetailApiRequest, OrderDetailApiResponse> {
+import java.util.List;
+import java.util.stream.Collectors;
 
-    @Autowired
-    private OrderDetailRepository orderDetailRepository;
+@Service
+public class OrderDetailApiLogicService extends BaseService<OrderDetailApiRequest, OrderDetailApiResponse, OrderDetail> {
+
     @Autowired
     private ItemRepository itemRepository;
     @Autowired
@@ -37,21 +42,21 @@ public class OrderDetailApiLogicService implements CrudInterface<OrderDetailApiR
                 .item(itemRepository.getOne(body.getItemId()))
                 .build();
 
-        OrderDetail newOrderDetail = orderDetailRepository.save(orderDetail);
-        return response(newOrderDetail);
+        OrderDetail newOrderDetail = baseRepository.save(orderDetail);
+        return Header.OK(response(newOrderDetail));
     }
 
     @Override
     public Header<OrderDetailApiResponse> read(Long id) {
-        return orderDetailRepository.findById(id)
-                .map(orderDetail -> response(orderDetail))
+        return baseRepository.findById(id)
+                .map(orderDetail -> Header.OK(response(orderDetail)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header<OrderDetailApiResponse> update(Header<OrderDetailApiRequest> request) {
         OrderDetailApiRequest body = request.getData();
-        return orderDetailRepository.findById(body.getId())
+        return baseRepository.findById(body.getId())
                 .map(orderDetail -> {
                     orderDetail
                             .setId(body.getId())
@@ -66,24 +71,34 @@ public class OrderDetailApiLogicService implements CrudInterface<OrderDetailApiR
                     return orderDetail;
                 })
                 .map(newOrderDetail -> {
-                    orderDetailRepository.save(newOrderDetail);
+                    baseRepository.save(newOrderDetail);
                     return newOrderDetail;
                 })
-                .map(this::response)
+                .map(orderDetail -> Header.OK(response(orderDetail)))
                 .orElseGet(()->Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header delete(Long id) {
-        return orderDetailRepository.findById(id)
+        return baseRepository.findById(id)
                 .map(orderDetail -> {
-                    orderDetailRepository.delete(orderDetail);
+                    baseRepository.delete(orderDetail);
                     return Header.OK();
                 })
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
-    private Header<OrderDetailApiResponse> response(OrderDetail orderDetail){
+    @Override
+    public Header<List<OrderDetailApiResponse>> search(Pageable pageable) {
+        Page<OrderDetail> orderDetails = baseRepository.findAll(pageable);
+
+        List<OrderDetailApiResponse> orderDetailApiResponseList = orderDetails.stream()
+                .map(orderGroup -> response(orderGroup))
+                .collect(Collectors.toList());
+        return Header.OK(orderDetailApiResponseList);
+    }
+
+    private OrderDetailApiResponse response(OrderDetail orderDetail){
         OrderDetailApiResponse body = OrderDetailApiResponse.builder()
                 .id(orderDetail.getId())
                 .status(orderDetail.getStatus())
@@ -98,6 +113,6 @@ public class OrderDetailApiLogicService implements CrudInterface<OrderDetailApiR
                 .itemId(orderDetail.getItem().getId())
                 .build();
 
-        return Header.OK(body);
+        return body;
     }
 }

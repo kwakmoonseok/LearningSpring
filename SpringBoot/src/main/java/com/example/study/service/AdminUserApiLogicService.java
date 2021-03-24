@@ -3,19 +3,25 @@ package com.example.study.service;
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.AdminUser;
 import com.example.study.model.entity.Category;
+import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.AdminUserApiRequest;
 import com.example.study.model.network.request.CategoryApiRequest;
 import com.example.study.model.network.response.AdminUserApiResponse;
 import com.example.study.model.network.response.CategoryApiResponse;
+import com.example.study.model.network.response.OrderGroupApiResponse;
 import com.example.study.repository.AdminUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
-public class AdminUserApiLogicService implements CrudInterface<AdminUserApiRequest, AdminUserApiResponse> {
+public class AdminUserApiLogicService extends BaseService<AdminUserApiRequest, AdminUserApiResponse, AdminUser> {
     @Autowired
     private AdminUserRepository adminUserRepository;
     @Override
@@ -38,13 +44,13 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                 .updatedBy(body.getUpdatedBy())
                 .build();
         AdminUser newAdminUser = adminUserRepository.save(adminUser);
-        return response(newAdminUser);
+        return Header.OK(response(newAdminUser));
     }
 
     @Override
     public Header<AdminUserApiResponse> read(Long id) {
         return adminUserRepository.findById(id)
-                .map(this::response)
+                .map(adminUser -> Header.OK(response(adminUser)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
@@ -72,7 +78,7 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                     adminUserRepository.save(newAdminUser);
                     return newAdminUser;
                 })
-                .map(this::response)
+                .map(adminUser -> Header.OK(response(adminUser)))
                 .orElseGet(()->Header.ERROR("Data is not exist"));
     }
 
@@ -86,7 +92,17 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                 .orElseGet(()->Header.ERROR("Data is not exist"));
     }
 
-    private Header<AdminUserApiResponse> response(AdminUser adminUser){
+    @Override
+    public Header<List<AdminUserApiResponse>> search(Pageable pageable) {
+        Page<AdminUser> adminUsers = baseRepository.findAll(pageable);
+
+        List<AdminUserApiResponse> adminUserApiResponseList = adminUsers.stream()
+                .map(adminUser -> response(adminUser))
+                .collect(Collectors.toList());
+        return Header.OK(adminUserApiResponseList);
+    }
+
+    private AdminUserApiResponse response(AdminUser adminUser){
         AdminUserApiResponse body = AdminUserApiResponse.builder()
                 .id(adminUser.getId())
                 .account(adminUser.getAccount())
@@ -103,6 +119,6 @@ public class AdminUserApiLogicService implements CrudInterface<AdminUserApiReque
                 .updatedAt(adminUser.getUpdatedAt())
                 .updatedBy(adminUser.getUpdatedBy())
                 .build();
-        return Header.OK(body);
+        return body;
     }
 }

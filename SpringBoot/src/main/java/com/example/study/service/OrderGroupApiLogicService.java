@@ -2,21 +2,25 @@ package com.example.study.service;
 
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.OrderGroup;
+import com.example.study.model.entity.User;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.OrderGroupApiRequest;
 import com.example.study.model.network.response.OrderGroupApiResponse;
+import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.OrderGroupRepository;
 import com.example.study.repository.UserRepository;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
-public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiRequest, OrderGroupApiResponse> {
-    @Autowired
-    private OrderGroupRepository orderGroupRepository;
+public class OrderGroupApiLogicService extends BaseService<OrderGroupApiRequest, OrderGroupApiResponse, OrderGroup> {
     @Autowired
     private UserRepository userRepository;
 
@@ -36,21 +40,21 @@ public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiReq
                 .user(userRepository.getOne(body.getUserId()))
                 .build();
 
-        OrderGroup newOrderGroup = orderGroupRepository.save(orderGroup);
-        return response(newOrderGroup);
+        OrderGroup newOrderGroup = baseRepository.save(orderGroup);
+        return Header.OK(response(newOrderGroup));
     }
 
     @Override
     public Header<OrderGroupApiResponse> read(Long id) {
-        return orderGroupRepository.findById(id)
-                .map(orderGroup -> response(orderGroup))
+        return baseRepository.findById(id)
+                .map(orderGroup -> Header.OK(response(orderGroup)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header<OrderGroupApiResponse> update(Header<OrderGroupApiRequest> request) {
         OrderGroupApiRequest body = request.getData();
-        return orderGroupRepository.findById(body.getId())
+        return baseRepository.findById(body.getId())
                 .map(orderGroup -> {
                     orderGroup
                             .setStatus(body.getStatus())
@@ -65,22 +69,32 @@ public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiReq
                             .setUser(userRepository.getOne(body.getUserId()));
                     return orderGroup;
                 })
-                .map(changeOrderGroup -> orderGroupRepository.save(changeOrderGroup))
-                .map(newOrderGroup -> response(newOrderGroup))
+                .map(changeOrderGroup -> baseRepository.save(changeOrderGroup))
+                .map(newOrderGroup -> Header.OK(response(newOrderGroup)))
                 .orElseGet(()->Header.ERROR("Data is not exist!"));
     }
 
     @Override
     public Header delete(Long id) {
-        return orderGroupRepository.findById(id)
+        return baseRepository.findById(id)
                 .map(orderGroup -> {
-                    orderGroupRepository.delete(orderGroup);
+                    baseRepository.delete(orderGroup);
                     return Header.OK();
                 })
                 .orElseGet(()->Header.ERROR("Data is not exist!"));
     }
 
-    private Header<OrderGroupApiResponse> response(OrderGroup orderGroup){
+    @Override
+    public Header<List<OrderGroupApiResponse>> search(Pageable pageable) {
+        Page<OrderGroup> orderGroups = baseRepository.findAll(pageable);
+
+        List<OrderGroupApiResponse> orderGroupApiResponseList = orderGroups.stream()
+                .map(orderGroup -> response(orderGroup))
+                .collect(Collectors.toList());
+        return Header.OK(orderGroupApiResponseList);
+    }
+
+    public OrderGroupApiResponse response(OrderGroup orderGroup){
         OrderGroupApiResponse body = OrderGroupApiResponse.builder()
                 .id(orderGroup.getId())
                 .status(orderGroup.getStatus())
@@ -94,6 +108,6 @@ public class OrderGroupApiLogicService implements CrudInterface<OrderGroupApiReq
                 .arrivalDate(orderGroup.getArrivalDate())
                 .userId(orderGroup.getUser().getId())
                 .build();
-        return Header.OK(body);
+        return body;
     }
 }

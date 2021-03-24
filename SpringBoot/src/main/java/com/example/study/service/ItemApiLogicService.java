@@ -2,15 +2,21 @@ package com.example.study.service;
 
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.Item;
+import com.example.study.model.entity.OrderGroup;
 import com.example.study.model.network.Header;
 import com.example.study.model.network.request.ItemApiRequest;
 import com.example.study.model.network.response.ItemApiResponse;
+import com.example.study.model.network.response.OrderGroupApiResponse;
 import com.example.study.repository.ItemRepository;
 import com.example.study.repository.PartnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResponse, Item> {
@@ -32,13 +38,13 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResp
                 .build();
 
         Item newItem = baseRepository.save(item);
-        return response(newItem);
+        return Header.OK(response(newItem));
     }
 
     @Override
     public Header<ItemApiResponse> read(Long id) {
         return baseRepository.findById(id)
-                .map(item -> response(item))
+                .map(item -> Header.OK(response(item)))
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
@@ -61,7 +67,7 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResp
                     baseRepository.save(newEntityItem);
                     return newEntityItem;
                 })
-                .map(item -> response(item))
+                .map(item -> Header.OK(response(item)))
                 .orElseGet(()->Header.ERROR("Data is not exist!"));
     }
 
@@ -75,7 +81,17 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResp
                 .orElseGet(() -> Header.ERROR("Data is not exist!"));
     }
 
-    private Header<ItemApiResponse> response(Item item){
+    @Override
+    public Header<List<ItemApiResponse>> search(Pageable pageable) {
+        Page<Item> items = baseRepository.findAll(pageable);
+
+        List<ItemApiResponse> itemApiResponseList = items.stream()
+                .map(item -> response(item))
+                .collect(Collectors.toList());
+        return Header.OK(itemApiResponseList);
+    }
+
+    public ItemApiResponse response(Item item){
         ItemApiResponse body = ItemApiResponse.builder()
                 .id(item.getId())
                 .status(item.getStatus())
@@ -89,6 +105,6 @@ public class ItemApiLogicService extends BaseService<ItemApiRequest, ItemApiResp
                 .partnerId(item.getPartner().getId())
                 .build();
 
-        return Header.OK(body);
+        return body;
     }
 }

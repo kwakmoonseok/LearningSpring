@@ -28,7 +28,7 @@ public class Person {
     private String address;
 
     @Embedded
-    private Birthday birthday = new Birthday();
+    private Birthday birthday;
 
     private String job;
     @ToString.Exclude

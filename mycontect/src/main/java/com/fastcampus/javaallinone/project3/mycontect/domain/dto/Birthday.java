@@ -8,6 +8,7 @@ import javax.persistence.Embeddable;
 import javax.validation.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.time.LocalDate;
 
 @Embeddable
 @AllArgsConstructor
@@ -18,10 +19,16 @@ import javax.validation.constraints.Min;
 @Data
 public class Birthday {
     public Integer yearOfBirthday;
-    @Min(1)
-    @Max(12)
     public Integer monthOfBirthday;
-    @Min(1)
-    @Max(31)
     public Integer dayOfBirthday;
+
+    private Birthday(LocalDate birthday) {
+        this.yearOfBirthday = birthday.getYear();
+        this.monthOfBirthday = birthday.getMonthValue();
+        this.dayOfBirthday = birthday.getDayOfMonth();
+    }
+
+    public static Birthday of(LocalDate birthday){
+        return new Birthday(birthday);
+    }
 }
